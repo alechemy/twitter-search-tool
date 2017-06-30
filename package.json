@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node server.js",
+    "build": "ng build && node server.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -20,8 +20,15 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
     "core-js": "^2.4.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.6",
+    "mongoose-long": "^0.1.1",
+    "request": "^2.81.0",
     "rxjs": "^5.1.0",
+    "twitter": "^1.7.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

@@ -1,28 +1,17 @@
-# MeanTest
+Authors: Alec Custer and Jack Taylor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+How to Run:
+Step 0a) Install Node
+Step 0b) Install mongoDB
 
-## Development server
+Step 1) ```cd``` into the project directory
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Step 2) Run ```npm install``` to install all dependencies required for running our project, such as Mongoose and Angular 2. This will take a few seconds.
 
-## Code scaffolding
+Step 3) Open server/twitterKeys.js and paste in your own ```consumer_key```, ```consumer_secret```, and ```bearer_token``` (app level access).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+Step 4) Enter ```npm run build``` in the Terminal shell from the root project directory to run the ```server.js``` file and compile the Angular 2 front-end application.
 
-## Build
+Step 5) Finally, navigate to ```localhost:3000``` in a browser of your choice to begin gathering tweets.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Step 6) (Optional) Our front-end application provides the option to view the first one hundred tweets for a search in the browser. To interact with the entire database(s), we recommend using a MongoDB GUI such as Robomongo.
