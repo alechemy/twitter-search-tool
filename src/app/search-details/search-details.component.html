@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <button type="button" class="btn btn-primary" [routerLink]="['/searches']">Back to all searches</button>
+  </div>
+
+  <h1>Search: {{name}}</h1>
+  
+  <div class="card card-block">
+    <h4 class="card-title">Search Details:</h4>
+    <h5>Min ID: {{db.minID}}</h5>
+    <h5>Max ID: {{db.maxID}}</h5>
+    <h5>Contains: {{db.count}} tweets</h5>
+  </div>
+
+  <div class="col-xs-12" style="height:30px;"></div>
+
+  <h5>Tweets (limit 100)</h5>
+  <div class="row" *ngFor="let tweet of db.tweets">
+    <div class="card card-block">
+      <h4 class="card-title">{{ tweet.author }}</h4>
+      <p>{{ tweet._id }}</p>
+      <p>{{ tweet.content }}</p>
+    </div>
+  </div>
+</div>

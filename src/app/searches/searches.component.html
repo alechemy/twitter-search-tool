@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12" style="height:30px;"></div>
+    <h1>Twitter Search Tool</h1>
+    <p>Note: Before using this tool, you must set your API keys in the 'server/twitterKeys.js' file.</p>
+    <div class="card card-block">
+      <h4 class="card-title">New search</h4>
+      <form>
+        <div class="form-group">
+          <label for="query-name">Query</label>
+          <input class="form-control" autocomplete="off" name="query-name" #newquery placeholder="#MongoDB"/>
+        </div>
+
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input class="form-control" type="number" min="1" autocomplete="off" name="quantity" #newquantity placeholder="2000"/>
+        </div>
+
+        <button class="btn btn-primary" (click)="createSearch(newquery, newquantity)">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-xs-12" style="height:30px;"></div>
+  <h4 class="card-title">Previous searches</h4>
+  <div class="row" *ngFor="let search of searches">
+    <div class="card card-block">
+      <h4 class="card-title">{{ search.name }}</h4>
+      <a href="#" class="btn btn-primary" [routerLink]="['/search', search.name]">Connect</a>
+      <a href="#" class="btn btn-danger" (click)="deleteSearch(search.name)">Delete</a>
+    </div>
+  </div>
+</div>
