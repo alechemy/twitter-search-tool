@@ -1,4 +1,4 @@
-Authors: Alec Custer and Jack Taylor
+Authors: Alec Custer and [Jack Taylor](https://github.com/jtaylorz)
 
 How to Run:
 Step 0a) Install Node
